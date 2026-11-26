@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="ms"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Naufal Homebarber - Tempah gunting rambut di Cheras</title>
+<meta name="description" content="Tempah slot gunting rambut dengan Naufal Homebarber, Batu 9 Cheras. Normal RM20, kids RM15, long trim +RM5.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Hanken+Grotesk:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#12203a;--red:#d4283a;--blue:#2b5fb4;--bg:#eef1f4;--line:#c9d1db;--mut:#5b6678}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 'Hanken Grotesk',system-ui,sans-serif}
+h1,h2,h3,.d{font-family:'Bricolage Grotesque',system-ui,sans-serif;letter-spacing:-.02em}
+.wrap{max-width:920px;margin:0 auto;padding:0 20px}
+.hero{background:var(--ink);color:#fff;padding:56px 0 64px;position:relative}
+.hero .wrap{display:flex;align-items:center;justify-content:space-between;gap:28px}
+h1{font-size:clamp(40px,9vw,88px);line-height:.98;font-weight:800;margin:0 0 18px}
+.hero p{max-width:32ch;color:#c5d0e3;margin:0 0 26px;font-size:18px}
+.pole{--u:1;flex:none;display:flex;flex-direction:column;align-items:center;width:calc(76px*var(--u));filter:drop-shadow(0 10px 16px rgba(0,0,0,.5))}
+.cap{width:100%;height:calc(34px*var(--u));position:relative;border-radius:50% 50% 8% 8%/90% 90% 8% 8%;background:linear-gradient(90deg,#59616d,#d9dee5 22%,#fff 38%,#a4acb7 62%,#4a515c)}
+.cap::after{content:"";position:absolute;left:-4%;right:-4%;bottom:0;height:36%;border-radius:999px;background:linear-gradient(90deg,#3f4651,#c9cfd7 30%,#f4f6f8 45%,#8b939e 70%,#363c46)}
+.cap.bot{transform:scaleY(-1)}
+.tube{position:relative;width:calc(58px*var(--u));height:calc(210px*var(--u));background:linear-gradient(45deg,#d4283a 0 12.5%,#fff 12.5% 25%,#2b5fb4 25% 37.5%,#fff 37.5% 50%,#d4283a 50% 62.5%,#fff 62.5% 75%,#2b5fb4 75% 87.5%,#fff 87.5% 100%);background-size:calc(64px*var(--u)) calc(64px*var(--u));animation:spin 1.6s linear infinite}
+.tube::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.38) 0,rgba(255,255,255,.5) 20%,rgba(255,255,255,0) 42%,rgba(0,0,0,.08) 68%,rgba(0,0,0,.5) 100%)}
+@keyframes spin{to{background-position:0 calc(64px*var(--u))}}
+@media(prefers-reduced-motion:reduce){.tube{animation:none}}
+.btn{display:inline-block;background:var(--red);color:#fff;border:0;border-radius:10px;padding:14px 24px;font:600 16px 'Hanken Grotesk',sans-serif;text-decoration:none;cursor:pointer}
+.btn:hover{filter:brightness(1.1)}
+section{padding:52px 0}
+h2{font-size:clamp(30px,5vw,44px);line-height:1.05;font-weight:800;margin:0 0 22px}
+h3{font-size:18px;margin:22px 0 10px}
+.row{display:flex;align-items:baseline;gap:12px;padding:14px 0;border-bottom:1px solid var(--line)}
+.row span{font-size:19px;font-weight:600}.row i{flex:1;border-bottom:2px dotted var(--line);transform:translateY(-4px)}
+.row b{font:800 26px 'Bricolage Grotesque',sans-serif}.row small{color:var(--mut);display:block;font-size:14px;font-weight:400}
+.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.gal div{aspect-ratio:1;background:#dde3ea;border-radius:8px;overflow:hidden;display:grid;place-items:center;color:var(--mut);font-size:14px}
+.gal img{width:100%;height:100%;object-fit:cover;display:block}
+.panel{background:#fff;border-radius:14px;padding:24px;border:1px solid var(--line)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{border:2px solid var(--line);background:#fff;color:var(--ink);border-radius:10px;padding:9px 14px;font:600 15px 'Hanken Grotesk',sans-serif;cursor:pointer;text-align:center;line-height:1.25}
+.chip.on{background:var(--ink);border-color:var(--ink);color:#fff}
+.chip:disabled{opacity:.35;text-decoration:line-through;cursor:not-allowed}
+.chip small{display:block;font-weight:400;font-size:12px}
+.times{display:grid;grid-template-columns:repeat(auto-fill,minmax(84px,1fr));gap:8px}
+input{width:100%;max-width:360px;padding:12px;border:2px solid var(--line);border-radius:10px;font:16px 'Hanken Grotesk',sans-serif;margin-bottom:8px;display:block}
+:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
+.note{background:#fdecee;border-left:4px solid var(--red);padding:12px 16px;border-radius:6px;margin:18px 0}
+.muted{color:var(--mut)}.err{color:var(--red);font-weight:600;min-height:1.5em}
+.ok{background:#e6f4ea;border-radius:10px;padding:18px}
+.bk{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid var(--line)}
+.bk button{background:none;border:2px solid var(--red);color:var(--red);border-radius:8px;padding:6px 12px;font-weight:600;cursor:pointer}
+footer{background:var(--ink);color:#c5d0e3;padding:40px 0}
+footer a{color:#fff}footer .lnk{display:flex;flex-wrap:wrap;gap:8px 22px;margin-bottom:14px}
+.stripe{height:10px;background:repeating-linear-gradient(-45deg,var(--red) 0 14px,#fff 14px 28px,var(--blue) 28px 42px,#fff 42px 56px)}
+@media(max-width:560px){.pole{--u:.72}.gal{grid-template-columns:repeat(2,1fr)}}
+.lang{position:absolute;top:16px;right:20px;background:none;border:2px solid #fff;color:#fff;border-radius:8px;padding:6px 14px;font:600 14px 'Hanken Grotesk',sans-serif;cursor:pointer;z-index:2}
+.lang:hover{background:#fff;color:var(--ink)}
+</style></head><body>
+<header class="hero"><button class="lang" id="lang" type="button" aria-label="Change language / Tukar bahasa">EN</button><div class="wrap"><div>
+<h1>Naufal<br>Homebarber</h1>
+<p data-t="hp"></p>
+<a class="btn" href="#tempah" data-t="hb"></a></div><div class="pole" aria-hidden="true"><i class="cap"></i><div class="tube"></div><i class="cap bot"></i></div></div></header>
+<div class="stripe"></div>
+
+<section id="harga"><div class="wrap"><h2 data-t="price"></h2>
+<div class="row"><span>Normal haircut</span><i></i><b>RM20</b></div>
+<div class="row"><span>Kids haircut<small data-t="kids"></small></span><i></i><b>RM15</b></div>
+<div class="row"><span>Long trim<small data-t="lt"></small></span><i></i><b>+RM5</b></div>
+</div></section>
+
+<section id="gallery" style="padding-top:0"><div class="wrap"><h2>Gallery</h2><div class="gal" id="gal"></div></div></section>
+
+<section id="tempah" style="padding-top:0"><div class="wrap"><h2 data-t="book"></h2>
+<div class="panel">
+<div id="form">
+<h3 style="margin-top:0" data-t="s1"></h3><div class="chips" id="sv"></div>
+<h3 data-t="s2"></h3><div class="chips" id="days"></div>
+<h3 data-t="s3"></h3><div class="times" id="times"><p class="muted">Pilih hari dulu.</p></div>
+<h3 data-t="s4"></h3>
+<input id="ph" type="tel" inputmode="tel" data-p="phph" autocomplete="tel">
+<input id="nm" data-p="nmph" autocomplete="name">
+<div class="note" data-t="note"></div>
+<p class="err" id="msg" role="alert"></p>
+<button class="btn" id="go" data-t="go"></button>
+</div>
+<div id="done" class="ok" hidden></div>
+</div>
+
+<h2 style="margin-top:48px;font-size:28px" data-t="chk"></h2>
+<div class="panel"><input id="fp" type="tel" inputmode="tel" data-p="fpph">
+<button class="btn" id="find" data-t="find"></button><div id="mine" style="margin-top:12px"></div></div>
+</div></section>
+
+<footer><div class="wrap"><div class="lnk">
+<a href="https://wa.me/60139806181">WhatsApp +60 13-980 6181</a>
+<a href="https://www.threads.com/@naufal_homebarber?igshid=NTc4MTIwNjQ2YQ==">Threads</a>
+<a href="https://share.google/80PO294HqcEsadStE">Google</a></div>
+<p style="margin:0">Naufal Homebarber, Lot 336, Jalan Cecawi 1, Batu 9, 43200 Cheras, Selangor</p></div></footer>
+
+<script>
+const $=s=>document.querySelector(s),pad=n=>String(n).padStart(2,'0');
+const api=(p,o)=>fetch('/api/'+p,o).then(r=>r.json().then(j=>({ok:r.ok,status:r.status,...j})));
+const SV={kids:['Kids',15],normal:['Normal',20],longtrim:['Long trim',25]};
+const T={
+ms:{HR:['Ahd','Isn','Sel','Rab','Kha','Jum','Sab'],MN:['Jan','Feb','Mac','Apr','Mei','Jun','Jul','Ogo','Sep','Okt','Nov','Dis'],
+title:'Naufal Homebarber - Tempah gunting rambut di Cheras',
+hp:'Gunting rambut di Batu 9, Cheras. Pilih servis, pilih masa, siap.',hb:'Tempah slot',price:'Harga',kids:'Bawah 12 tahun',lt:'Tambahan kepada harga haircut',
+book:'Tempah slot',s1:'Pilih servis',s2:'Pilih hari',s3:'Pilih masa',s4:'Nombor telefon',pickday:'Pilih hari dulu.',
+phph:'cth: 012-345 6789',nmph:'Nama (optional)',fpph:'Nombor telefon yang digunakan',
+note:'Sila book awal sebelum slot supaya Naufal ada masa untuk bersiap.',go:'Tempah sekarang',chk:'Semak atau batal booking',find:'Semak booking',
+today:'Hari ni',none:'Tiada slot kosong hari ni. Cuba hari lain.',pick:'Pilih hari dan masa dulu.',badph:'Masukkan nombor telefon yang betul.',
+e400:'Maklumat tak lengkap. Semak nombor telefon.',e409:'Slot ni dah tak available. Pilih masa lain.',efail:'Gagal. Cuba lagi.',
+okh:'Booking berjaya',cancelhint:'Nak batal? Guna "Semak atau batal booking" kat bawah.',wa:'Bagitahu Naufal di WhatsApp',
+wamsg:(s,d,t)=>`Hi Naufal, saya dah book ${s} pada ${d} jam ${t}`,nobk:'Tiada booking akan datang untuk nombor ni.',cancel:'Batal',conf:'Batalkan booking ni?',photo:'Gambar',alt:'Contoh gunting rambut'},
+en:{HR:['Sun','Mon','Tue','Wed','Thu','Fri','Sat'],MN:['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
+title:'Naufal Homebarber - Book a haircut in Cheras',
+hp:'Haircuts at Batu 9, Cheras. Pick a service, pick a time, done.',hb:'Book a slot',price:'Prices',kids:'Under 12 years old',lt:'Added on top of the haircut price',
+book:'Book a slot',s1:'Choose a service',s2:'Choose a day',s3:'Choose a time',s4:'Phone number',pickday:'Choose a day first.',
+phph:'e.g. 012-345 6789',nmph:'Name (optional)',fpph:'Phone number used for booking',
+note:'Please book early, before the slot, so Naufal has time to get ready.',go:'Book now',chk:'Check or cancel a booking',find:'Check booking',
+today:'Today',none:'No free slots on this day. Try another day.',pick:'Choose a day and time first.',badph:'Enter a valid phone number.',
+e400:'Details incomplete. Check your phone number.',e409:'That slot is no longer available. Choose another time.',efail:'Something went wrong. Try again.',
+okh:'Booking confirmed',cancelhint:'Need to cancel? Use "Check or cancel a booking" below.',wa:'Tell Naufal on WhatsApp',
+wamsg:(s,d,t)=>`Hi Naufal, I booked ${s} on ${d} at ${t}`,nobk:'No upcoming bookings for this number.',cancel:'Cancel',conf:'Cancel this booking?',photo:'Photo',alt:'Haircut example'}};
+let L=localStorage.lang==='en'?'en':'ms',last=null,im={};
+const t=k=>T[L][k];
+const st={sv:'normal',date:'',time:''};
+const iso=d=>d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate());
+const nice=s=>{const d=new Date(s+'T00:00');return t('HR')[d.getDay()]+', '+d.getDate()+' '+t('MN')[d.getMonth()]};
+function draw(){
+  $('#sv').innerHTML=Object.entries(SV).map(([k,v])=>`<button class="chip ${st.sv===k?'on':''}" data-sv="${k}">${v[0]}<small>RM${v[1]}</small></button>`).join('');
+  let h='';for(let i=0;i<14;i++){const d=new Date();d.setDate(d.getDate()+i);const s=iso(d);
+    h+=`<button class="chip ${st.date===s?'on':''}" data-d="${s}">${i?t('HR')[d.getDay()]:t('today')}<small>${d.getDate()} ${t('MN')[d.getMonth()]}</small></button>`}
+  $('#days').innerHTML=h}
+async function slots(){
+  const r=await api('slots?date='+st.date),el=$('#times');
+  const list=(r.slots||[]).filter(s=>s.s!=='past');
+  if(r.closed||!list.some(s=>s.s==='free')){el.innerHTML='<p class="muted">'+t('none')+'</p>';return}
+  el.innerHTML=list.map(s=>`<button class="chip ${st.time===s.t?'on':''}" data-t="${s.t}" ${s.s!=='free'?'disabled':''}>${s.t}</button>`).join('')}
+function renderDone(){
+  const d=$('#done'),n=SV[last.sv];d.hidden=false;
+  d.innerHTML=`<h3 style="margin:0 0 6px">${t('okh')}</h3><p style="margin:0 0 12px">${n[0]} (RM${n[1]}), ${nice(last.date)}, ${last.time}.<br>${t('cancelhint')}</p><a class="btn" href="https://wa.me/60139806181?text=${encodeURIComponent(t('wamsg')(n[0],nice(last.date),last.time))}">${t('wa')}</a>`}
+function renderGal(){
+  $('#gal').innerHTML=[1,2,3,4,5,6].map(i=>`<div>${im[i]?`<img src="${im[i]}" alt="${t('alt')} ${i}" loading="lazy">`:t('photo')+' '+i}</div>`).join('')}
+function applyLang(){
+  document.documentElement.lang=L;document.title=t('title');$('#lang').textContent=L==='ms'?'EN':'BM';
+  document.querySelectorAll('[data-t]').forEach(e=>{if(!e.classList.contains('chip'))e.textContent=t(e.dataset.t)});
+  document.querySelectorAll('[data-p]').forEach(e=>e.placeholder=t(e.dataset.p));
+  $('#msg').textContent='';draw();
+  if(st.date)slots();else $('#times').innerHTML='<p class="muted">'+t('pickday')+'</p>';
+  if(last)renderDone();
+  if($('#mine').innerHTML.trim())find();
+  renderGal()}
+$('#lang').onclick=()=>{L=L==='ms'?'en':'ms';localStorage.lang=L;applyLang()};
+document.addEventListener('click',async e=>{
+  const c=e.target.closest('.chip');if(!c)return;
+  if(c.dataset.sv){st.sv=c.dataset.sv;draw()}
+  if(c.dataset.d){st.date=c.dataset.d;st.time='';draw();slots()}
+  if(c.dataset.t){st.time=c.dataset.t;slots()}});
+$('#go').onclick=async()=>{
+  const m=$('#msg');m.textContent='';
+  if(!st.date||!st.time){m.textContent=t('pick');return}
+  if($('#ph').value.replace(/\D/g,'').length<9){m.textContent=t('badph');return}
+  const r=await api('book',{method:'POST',body:JSON.stringify({service:st.sv,date:st.date,time:st.time,phone:$('#ph').value,name:$('#nm').value})});
+  if(!r.ok){m.textContent=r.status===409?t('e409'):r.status===400?t('e400'):t('efail');slots();return}
+  localStorage.ph=$('#ph').value;last={sv:st.sv,date:st.date,time:st.time};
+  $('#form').hidden=true;renderDone();$('#fp').value=localStorage.ph}
+async function find(){
+  const v=$('#fp').value,r=await api('mine?phone='+encodeURIComponent(v)),el=$('#mine');
+  el.innerHTML=(r.bookings||[]).length?r.bookings.map(b=>`<div class="bk"><span>${SV[b.service][0]}, ${nice(b.date)}, ${b.time}</span><button data-c="${b.id}">${t('cancel')}</button></div>`).join(''):'<p class="muted">'+t('nobk')+'</p>'}
+$('#find').onclick=find;
+$('#mine').onclick=async e=>{const id=e.target.dataset.c;if(!id||!confirm(t('conf')))return;
+  await api('cancel',{method:'POST',body:JSON.stringify({id:+id,phone:$('#fp').value})});find();if(st.date)slots()};
+$('#ph').value=$('#fp').value=localStorage.ph||'';
+applyLang();
+api('gallery').then(r=>{(r.images||[]).forEach(i=>im[i.slot]=i.img);renderGal()});
+</script></body></html>
