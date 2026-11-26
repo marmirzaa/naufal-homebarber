@@ -1,0 +1,4 @@
+CREATE TABLE IF NOT EXISTS bookings(id INTEGER PRIMARY KEY AUTOINCREMENT, service TEXT, date TEXT, time TEXT, phone TEXT, name TEXT, status TEXT DEFAULT 'active', created TEXT DEFAULT CURRENT_TIMESTAMP);
+CREATE UNIQUE INDEX IF NOT EXISTS uq_slot ON bookings(date,time) WHERE status='active';
+CREATE TABLE IF NOT EXISTS blocked(date TEXT, time TEXT, PRIMARY KEY(date,time));
+CREATE TABLE IF NOT EXISTS gallery(slot INTEGER PRIMARY KEY, img TEXT);
